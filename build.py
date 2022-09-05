@@ -71,10 +71,10 @@ if response.status_code == requests.codes.ok:
                   div(title, cls='location')
 
                   if contact_by_email:
-                      a('Contact {n} member{s} via mail'.format(n=member_count, s='s' if member_count > 1 else ''),
+                      a('Contact {n} member{s}'.format(n=member_count, s='s' if member_count > 1 else ''),
                         cls='button btn-chapters contact_via_email', data_location=title)
                   else:
-                      a('Contact {n} member{s} via forum'.format(n=member_count, s='s' if member_count > 1 else ''),
+                      a('Contact {n} member{s}'.format(n=member_count, s='s' if member_count > 1 else ''),
                         href='https://forum.tzm.community/groups/{name}'.format(name=name), target='blank', cls='button btn-chapters')
 
     list.add(raw("""
