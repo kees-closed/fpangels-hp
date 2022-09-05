@@ -1,7 +1,10 @@
-# Fairphone Angels Homepage
+# TZM Chapters
 
 ## About
-This is a simple homepage for the [Fairphone Angels Program](https://forum.fairphone.com/t/the-fairphone-angels-program-local-support-by-community-members/33058?u=stefan). It is built with [Dominate][dominate] (Python package) and hosted on [Github Pages](https://pages.github.com/).
+This listing is dynamically generated based on the [TZM forum groups](https://forum.tzm.community/g).
+
+## Attribution
+Our thanks go out to the work done by the [Fairphone Angels Program](https://forum.fairphone.com/t/the-fairphone-angels-program-local-support-by-community-members/33058?u=stefan). This made our work significantly easier.
 
 ## Develop
 
@@ -12,7 +15,6 @@ This is a simple homepage for the [Fairphone Angels Program](https://forum.fairp
 
 ## Dependencies
 - [Dominate][dominate] (LGPL-3.0 License)
-- [PyYAML](https://pyyaml.org/) (MIT License)
 - [Requests](https://requests.kennethreitz.org/en/master/) (Apache License 2.0)
 
 [dominate]: https://github.com/Knio/dominate

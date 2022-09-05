@@ -1,12 +1,10 @@
 'use strict'
 
 window.addEventListener('DOMContentLoaded', function() {
-  twemoji.parse(document.body)
-
-  const contact_buttons = document.getElementsByClassName('btn-angels')
+  const contact_buttons = document.getElementsByClassName('contact_via_email')
   for (let button of contact_buttons) {
-    const location = button.dataset.location.toLowerCase()
-    const mailto = `mailto:${location}@fairphone.community`
+    const location = button.dataset.location.replace(/ /g, '-').toLowerCase();
+    const mailto = `mailto:${location}@tzm.community`
     button.setAttribute('href', mailto)
   }
 });

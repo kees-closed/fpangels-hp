@@ -3,15 +3,24 @@
 }
 
 @font-face {
-  font-family: Roboto;
-  src: url("Roboto-Regular.ttf") format("ttf");
-  font-weight: normal;
+  font-family: 'Raleway';
   font-style: normal;
+  font-weight: 400;
+  src: url(resources/Raleway-Regular.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+  20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url(resources/Poppins-Regular.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+  20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 html {
-	box-sizing: border-box;
-	font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  font-family: 'Raleway', Helvetica;
 }
 
 body {
@@ -68,9 +77,10 @@ h1 {
 .list {
   display: flex;
   flex-direction: column;
+  font-family: 'Poppins', Helvetica;
 }
 
-.heaven {
+.chapter {
   display: flex;
   flex-direction: row;
 
@@ -79,41 +89,42 @@ h1 {
   padding: 0.5em;
 }
 
-.heaven:not(:last-child) {
+.chapter:not(:last-child) {
   border-width: 0 0 thin 0;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.2);
 }
 
-.heaven img {
+.chapter img {
   height: 1.5em;
   width:auto;
   padding: 0 0.5em;
 }
 
-.heaven > * {
+.chapter > * {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.btn-angels {
+.btn-chapters {
   background: var(--fairphone-blue);
   color: white;
 
   padding: .5em;
 
-  flex: 0 1 220px;
+  flex: 0 1 255px;
+}
+
+footer {
+  font-family: 'Poppins', Helvetica;
+  text-align: center;
 }
 
 footer ul {
   display: inline-block;
   padding: 0;
   list-style: none;
-}
-
-footer ul > li {
-  margin-bottom: 0.5em;
 }
 
 .sort {
