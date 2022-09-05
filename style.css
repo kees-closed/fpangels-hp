@@ -28,11 +28,12 @@ body {
 }
 
 a {
-  color: unset;
+  color: #006699;
 }
 
 .button {
   display: flex;
+  white-space: pre;
   justify-content: center;
 
   border-radius: 0.25em;
@@ -113,7 +114,7 @@ h1 {
 
   padding: .5em;
 
-  flex: 0 1 180px;
+  flex: 0 1 140px;
 }
 
 footer {
