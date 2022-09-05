@@ -28,7 +28,7 @@ body {
 }
 
 a {
-  color: #006699;
+  color: unset;
 }
 
 .button {
@@ -115,6 +115,10 @@ h1 {
   padding: .5em;
 
   flex: 0 1 140px;
+}
+
+.search {
+  width: 20%;
 }
 
 footer {
