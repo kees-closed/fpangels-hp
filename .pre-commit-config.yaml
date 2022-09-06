@@ -1,0 +1,28 @@
+---
+repos:
+  - repo: local
+    hooks:
+      - id: black
+        name: Python Black
+        entry: black
+        args: [--check]
+        language: system
+        types: [file, jinja, text]
+        files: \.(py|py\.j2)$
+      - id: flake8
+        name: Python Flake8
+        entry: flake8
+        language: system
+        types: [file, jinja, text]
+        files: \.(py|py\.j2)$
+      - id: shellcheck
+        name: Shell Check
+        entry: shellcheck
+        language: system
+        types: [file, jinja, text]
+        files: \.(sh|sh\.j2)$
+      - id: yamllint
+        name: YAML Lint
+        entry: yamllint
+        language: system
+        types: [file, yaml]

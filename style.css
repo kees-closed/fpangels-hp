@@ -1,5 +1,5 @@
 :root {
-  --fairphone-blue: #2F70AC;
+  --discourse-blue: #2F70AC;
 }
 
 @font-face {
@@ -58,7 +58,7 @@ header > div {
 }
 
 header, footer {
-  background: var(--fairphone-blue);
+  background: var(--discourse-blue);
   color: white;
 }
 
@@ -68,7 +68,7 @@ h1 {
 
 .btn-info {
   background: white;
-  color: var(--fairphone-blue);
+  color: var(--discourse-blue);
 
   padding: 1em;
 }
@@ -112,7 +112,7 @@ h1 {
 }
 
 .btn-chapters {
-  background: var(--fairphone-blue);
+  background: var(--discourse-blue);
   color: white;
 
   padding: .5em;
