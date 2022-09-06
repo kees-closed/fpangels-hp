@@ -77,7 +77,7 @@ if response.status_code == requests.codes.ok:
                       a(raw('<i class="em em-love_letter"></i> {n} member{s}'.format(n=member_count, s='s' if member_count > 1 else '')),
                         href='https://forum.tzm.community/groups/{name}'.format(name=name), target='blank', cls='button btn-chapters')
                   else:
-                      a(raw('<i class="em em-mailbox_closed"></i> no members')),
+                      a(raw('<i class="em em-mailbox_closed"></i> no members'),
                         href='https://forum.tzm.community/groups/{name}'.format(name=name), target='blank', cls='button btn-chapters')
 
     list.add(raw("""
