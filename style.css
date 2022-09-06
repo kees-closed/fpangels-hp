@@ -131,6 +131,10 @@ footer ul {
   list-style: none;
 }
 
+.search {
+  width: 150px;
+}
+
 .sort {
   border-radius: 0.25em;
   padding: 2.6px 10px;
