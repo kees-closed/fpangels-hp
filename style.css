@@ -20,11 +20,12 @@
 
 html {
   box-sizing: border-box;
-  font-family: 'Raleway', Helvetica;
+  font-family: 'Poppins', Helvetica;
 }
 
 body {
   margin: 0;
+  background-color: #FFFFFF;
 }
 
 a {
@@ -52,6 +53,8 @@ header > div {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 header, footer {
@@ -78,7 +81,7 @@ h1 {
 .list {
   display: flex;
   flex-direction: column;
-  font-family: 'Poppins', Helvetica;
+  font-family: 'Raleway', Helvetica;
 }
 
 .chapter {
@@ -117,12 +120,8 @@ h1 {
   flex: 0 1 140px;
 }
 
-.search {
-  width: 20%;
-}
-
 footer {
-  font-family: 'Poppins', Helvetica;
+  font-family: 'Raleway', Helvetica;
   text-align: center;
 }
 

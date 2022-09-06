@@ -55,8 +55,8 @@ if response.status_code == requests.codes.ok:
             name = chapter['name']
             member_count = chapter['user_count']
 
-            if 'contact_chapter_by_email' in chapter['custom_fields']:
-                contact_by_email = chapter['custom_fields']['contact_chapter_by_email']
+            if 'contact_by_email' in chapter['custom_fields']:
+                contact_by_email = chapter['custom_fields']['contact_by_email']
             else:
                 contact_by_email = False
             if 'show_map' in chapter['custom_fields']:
@@ -64,17 +64,20 @@ if response.status_code == requests.codes.ok:
             else:
                 show_map = False
 
-            if member_count > 0 and show_map:
+            if show_map:
                 with div(cls='chapter'):
                   div(raw('<i class="em em-flag-{country}"></i>'.format(country=country)), cls='country')
                   #div(country, cls='em em-flag-{country}'.format(country=country)) # TODO: sorting doesn't work when the class is not unique
                   div(title, cls='location')
 
-                  if contact_by_email:
+                  if contact_by_email and member_count >= 1:
                       a(raw('<i class="em em-love_letter"></i> {n} member{s}'.format(n=member_count, s='s' if member_count > 1 else '')),
                         cls='button btn-chapters contact_via_email', data_location=title)
-                  else:
+                  elif member_count >= 1:
                       a(raw('<i class="em em-love_letter"></i> {n} member{s}'.format(n=member_count, s='s' if member_count > 1 else '')),
+                        href='https://forum.tzm.community/groups/{name}'.format(name=name), target='blank', cls='button btn-chapters')
+                  else:
+                      a(raw('<i class="em em-mailbox_closed"></i> no members')),
                         href='https://forum.tzm.community/groups/{name}'.format(name=name), target='blank', cls='button btn-chapters')
 
     list.add(raw("""
