@@ -79,7 +79,7 @@ h1 {
 .list {
   display: flex;
   overflow: auto;
-  height: 450px;
+  height: 400px;
   flex-direction: column;
   font-family: 'Raleway', Helvetica;
 }
