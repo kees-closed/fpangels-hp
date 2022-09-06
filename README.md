@@ -3,7 +3,7 @@
 # TZM Chapters Map
 
 ## About
->_`fprsmap` - abbreviation for "Fairphoners Map"_
+>_` fpangels-hp` - abbreviation for "Fairphone Angels Homepage"_
 
 This map is based on the work from the [WeAreFairphone Community][fpangels]. Without their amazing work and their willingness to make it open-source, we could not have made our TZM Chapters Map this easily. We will do our best to merge back any improvements we make, back to the WeAreFairphone Community.
 
