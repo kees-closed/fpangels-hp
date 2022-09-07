@@ -13,11 +13,11 @@ from dominate.tags import (
     footer,
     h1,
     a,
-    doc,
     li,
     ul,
 )
 from dominate.util import raw
+from dominate import document
 from os import chown, chmod
 from os.path import exists
 
@@ -45,6 +45,8 @@ if not exists(chapters_data):
 else:
     with open(chapters_data, "r", encoding="utf8") as file:
         chapters = json.loads(file.read())["groups"]
+
+    doc = document(title="TZM Chapters")
 
     with doc.head:
         link(rel="stylesheet", href="style.css")
