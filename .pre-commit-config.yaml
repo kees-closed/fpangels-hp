@@ -7,20 +7,17 @@ repos:
         entry: black
         args: [--check]
         language: system
-        types: [file, jinja, text]
-        files: \.(py|py\.j2)$
+        types: [file, python, text]
       - id: flake8
         name: Python Flake8
         entry: flake8
         language: system
-        types: [file, jinja, text]
-        files: \.(py|py\.j2)$
+        types: [file, python, text]
       - id: shellcheck
         name: Shell Check
         entry: shellcheck
         language: system
-        types: [file, jinja, text]
-        files: \.(sh|sh\.j2)$
+        types: [file, bash, text]
       - id: yamllint
         name: YAML Lint
         entry: yamllint
