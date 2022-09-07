@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import dominate
 import json
 import requests
@@ -45,7 +47,7 @@ if response.status_code == requests.codes.ok:
         meta(name="title", content="Chapters Map | The Zeitgeist Movement")
         meta(
             name="description",
-            content="A global overview of the chapters from The Zeitgeist Movement",
+            content="A global overview of the chapters of The Zeitgeist Movement",
         )
         meta(
             name="image",
@@ -54,7 +56,7 @@ if response.status_code == requests.codes.ok:
         meta(property="og:title", content="Chapters Map | The Zeitgeist Movement")
         meta(
             property="og:description",
-            content="A global overview of the chapters from The Zeitgeist Movement",
+            content="A global overview of the chapters of The Zeitgeist Movement",
         )
         meta(property="og:type", content="website")
         meta(property="og:url", content="https://chapters.tzm.community")
