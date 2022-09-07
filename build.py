@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-import dominate
 import json
 import requests
 import re
@@ -14,6 +13,7 @@ from dominate.tags import (
     footer,
     h1,
     a,
+    doc,
     li,
     ul,
 )
@@ -45,10 +45,6 @@ if not exists(chapters_data):
 else:
     with open(chapters_data, "r", encoding="utf8") as file:
         chapters = json.loads(file.read())["groups"]
-
-if response.status_code == requests.codes.ok:
-    chapters = json.loads(response.text)["groups"]
-    doc = dominate.document(title="TZM Chapters")
 
     with doc.head:
         link(rel="stylesheet", href="style.css")
