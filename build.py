@@ -18,6 +18,10 @@ from dominate.tags import (
     ul,
 )
 from dominate.util import raw
+from os import chown, chmod
+from os.path import exists
+
+chapters_data = "/var/lib/chapters_map/current_chapters.json"
 
 
 # Get country code based on hashtag in group bio
@@ -32,7 +36,15 @@ def get_chapter_country(bio):
 
 
 # Get chapter JSON
-response = requests.get("https://forum.tzm.community/groups.json?filter=chapter")
+if not exists(chapters_data):
+    print("Local chapters data not found, fetching directly from Internet")
+    response = requests.get("https://forum.tzm.community/groups.json?filter=chapter")
+
+    if response.status_code == requests.codes.ok:
+        chapters = json.loads(response.text)["groups"]
+else:
+    with open(chapters_data, "r", encoding="utf8") as file:
+        chapters = json.loads(file.read())["groups"]
 
 if response.status_code == requests.codes.ok:
     chapters = json.loads(response.text)["groups"]
@@ -186,3 +198,5 @@ if response.status_code == requests.codes.ok:
 
     with open("index.html", "w", encoding="utf8") as file:
         file.write(str(doc))
+        chown("index.html", "www-data", "www-data")
+        chmod("index.html", "0640")
