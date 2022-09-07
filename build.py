@@ -196,5 +196,5 @@ else:
 
     with open("index.html", "w", encoding="utf8") as file:
         file.write(str(doc))
-        chown("index.html", "www-data", "www-data")
-        chmod("index.html", "0640")
+        chown("index.html", 33, 33)
+        chmod("index.html", 640)
