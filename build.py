@@ -57,7 +57,7 @@ with doc.head:
     meta(name="title", content="Chapters Map | The Zeitgeist Movement")
     meta(
         name="description",
-        content="A global overview of the chapters of The Zeitgeist Movement",
+        content="A global chapters overview of The Zeitgeist Movement",
     )
     meta(
         name="image",
@@ -66,7 +66,7 @@ with doc.head:
     meta(property="og:title", content="Chapters Map | The Zeitgeist Movement")
     meta(
         property="og:description",
-        content="A global overview of the chapters of The Zeitgeist Movement",
+        content="A global chapters overview of The Zeitgeist Movement",
     )
     meta(property="og:type", content="website")
     meta(property="og:url", content="https://chapters.tzm.community")
