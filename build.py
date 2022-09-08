@@ -107,9 +107,11 @@ map.add(
 list.add(
     raw(
         """
-    <input class="search" placeholder="Search">
-    <button class="sort asc" data-sort="location">Sort by chapter</button>
-    <button class="sort" data-sort="country">Sort by country</button>"""
+    <div class="menu">
+      <input class="search" placeholder="Search">
+      <button class="sort asc" data-sort="location">Sort by chapter</button>
+      <button class="sort" data-sort="country">Sort by country</button>
+    </div>"""
     )
 )
 with list.add(div(cls="list")):
