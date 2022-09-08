@@ -81,7 +81,6 @@ h1 {
 .btn-info {
   background: white;
   color: var(--discourse-blue);
-
   padding: 1em;
 }
 
@@ -106,7 +105,6 @@ h1 {
 .chapter {
   display: flex;
   flex-direction: row;
-
   justify-content: space-between;
   height: 2em;
   padding: 0.5em;
@@ -133,10 +131,8 @@ h1 {
 .btn-chapters {
   background: var(--discourse-blue);
   color: white;
-
   padding: .5em;
-
-  flex: 0 1 140px;
+  flex: 0 1 110px;
 }
 
 footer {

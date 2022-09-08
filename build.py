@@ -159,7 +159,7 @@ with list.add(div(cls="list")):
                     )
                 else:
                     a(
-                        "no members",
+                        "No members",
                         href="https://forum.tzm.community/groups/{name}".format(
                             name=name
                         ),
@@ -188,5 +188,8 @@ with footer:
 
 with open("index.html", "w", encoding="utf8") as file:
     file.write(str(doc))
-    chown("index.html", 33, 33)
-    chmod("index.html", 640)
+    try:
+        chown("index.html", 33, 33)
+    except OSError as e:
+        print("Failed to change ownership: {}".format(e))
+    chmod("index.html", 0o640)
