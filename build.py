@@ -50,7 +50,7 @@ doc = document(title="TZM Chapters")
 
 with doc.head:
     link(rel="stylesheet", href="style.css")
-    link(rel="stylesheet", href="https://emoji-css.afeld.me/emoji.css")
+    link(rel="stylesheet", href="emoji.css")
     link(rel="shortcut icon", href="resources/favicon.png")
     script(type="text/javascript", src="script.js")
     meta(name="viewport", content="width=device-width")
