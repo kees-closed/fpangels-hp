@@ -49,7 +49,7 @@ else:
 doc = document(title="TZM Chapters")
 
 with doc.head:
-    link(rel="stylesheet", href="style.css")
+    link(rel="stylesheet", href="style.min.css")
     link(rel="stylesheet", href="emoji.css")
     link(rel="shortcut icon", href="resources/favicon.png")
     script(type="text/javascript", src="script.js")

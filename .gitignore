@@ -1,2 +1,3 @@
-index.html
 *.swp
+index.html
+node_modules
