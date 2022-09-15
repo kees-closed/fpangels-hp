@@ -131,16 +131,7 @@ with list.add(div(cls="list")):
 
         if show_map:
             with div(cls="chapter"):
-                div(
-                    raw(
-                        '<b class="country {country}">{country}</b>'.format(
-                            country=country.upper()
-                        )
-                    ),
-                    cls="country",
-                )
-                # TODO: sorting doesn't work when the class is not unique, list.js needs to be modified for this
-                # div(country, cls='em em-flag-{country}'.format(country=country))
+                div(li("{country}".format(country=country.upper()), cls="country"))
                 div(title, cls="location")
 
                 if contact_by_email and member_count >= 1:
