@@ -24,7 +24,7 @@ html {
 
 body {
   margin: 0;
-  background-color: #FFFFFF;
+  background-color: white;
   height: 100%;
   display: grid;
   grid-template-rows: min-content min-content auto min-content;
@@ -57,9 +57,19 @@ a {
 }
 
 .wrapper {
-  max-width: 600px;
+  max-width: 1000px;
   margin: 0 auto;
   height: auto;
+}
+
+.country {
+  width: 35px;
+  border-radius: 0.25em;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--discourse-blue);
 }
 
 header > div {

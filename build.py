@@ -50,7 +50,6 @@ doc = document(title="TZM Chapters")
 
 with doc.head:
     link(rel="stylesheet", href="style.min.css")
-    link(rel="stylesheet", href="emoji.css")
     link(rel="shortcut icon", href="resources/favicon.png")
     script(type="text/javascript", src="script.js")
     meta(name="viewport", content="width=device-width")
@@ -133,7 +132,11 @@ with list.add(div(cls="list")):
         if show_map:
             with div(cls="chapter"):
                 div(
-                    raw('<i class="em em-flag-{country}"></i>'.format(country=country)),
+                    raw(
+                        '<b class="country {country}">{country}</b>'.format(
+                            country=country.upper()
+                        )
+                    ),
                     cls="country",
                 )
                 # TODO: sorting doesn't work when the class is not unique, list.js needs to be modified for this
