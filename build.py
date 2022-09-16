@@ -44,7 +44,7 @@ if not exists(chapters_data):
         chapters = json.loads(response.text)["groups"]
 else:
     with open(chapters_data, "r", encoding="utf8") as file:
-        chapters = json.loads(file.read())["groups"]
+        chapters = json.loads(file.read())
 
 doc = document(title="TZM Chapters")
 
