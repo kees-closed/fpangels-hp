@@ -86,7 +86,7 @@ header.add(
     a(
         "More Info",
         cls="button btn-info",
-        href="https://forum.tzm.community/about-tzm",
+        href="https://forum.tzm.community/quick-start",
         target="blank",
     )
 )
