@@ -76,6 +76,7 @@ a {
 }
 
 .country:hover {
+  text-decoration: underline;
   background-color: #006699;
 }
 
@@ -105,6 +106,7 @@ h1 {
 }
 
 .btn-info:hover {
+  text-decoration: underline;
   background-color: mintcream;
 }
 
@@ -160,6 +162,7 @@ h1 {
 }
 
 .btn-chapters:hover {
+  text-decoration: underline;
   background-color: #006699;
 }
 
