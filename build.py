@@ -132,7 +132,7 @@ with list.add(div(cls="list")):
             with div(cls="chapter"):
                 a(
                     "{c}".format(c=country.upper()),
-                    href="https://forum.tzm.community/tags/{c}".format(c=country),
+                    href="https://forum.tzm.community/tag/{c}".format(c=country),
                     target="blank",
                     cls="country",
                     data_location=title,
