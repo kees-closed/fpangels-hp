@@ -75,6 +75,10 @@ a {
   text-decoration: none;
 }
 
+.country:hover {
+  background-color: #006699;
+}
+
 header > div {
   display: flex;
   flex-direction: row;
@@ -98,6 +102,10 @@ h1 {
   background: white;
   color: var(--discourse-blue);
   padding: 1em;
+}
+
+.btn-info:hover {
+  background-color: mintcream;
 }
 
 .map {
@@ -149,6 +157,10 @@ h1 {
   color: white;
   padding: .5em;
   flex: 0 1 110px;
+}
+
+.btn-chapters:hover {
+  background-color: #006699;
 }
 
 footer {
