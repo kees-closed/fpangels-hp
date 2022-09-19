@@ -71,6 +71,8 @@ a {
   align-items: center;
   justify-content: center;
   background: var(--discourse-blue);
+  cursor: pointer;
+  text-decoration: none;
 }
 
 header > div {

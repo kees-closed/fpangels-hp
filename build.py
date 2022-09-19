@@ -85,9 +85,9 @@ header.add(h1("TZM Chapters"))
 header.add(
     a(
         "More Info",
-        cls="button btn-info",
         href="https://forum.tzm.community/quick-start",
         target="blank",
+        cls="button btn-info",
     )
 )
 
@@ -95,10 +95,8 @@ header.add(
 map.add(
     raw(
         """
-    <iframe src="https://map.tzm.community/?show=chapters" allowfullscreen="true" frameborder="0">
-        <p><a href="https://map.tzm.community/?show=chapters" target="_blank">See the TZM Chapters Map!</a></p>
-    </iframe>
-    """
+        <iframe src="https://map.tzm.community/?show=chapters" allowfullscreen="true" frameborder="0"></iframe>
+        """
     )
 )
 
@@ -106,11 +104,12 @@ map.add(
 list.add(
     raw(
         """
-    <div class="menu">
-      <input class="search" placeholder="Search">
-      <button class="sort asc" data-sort="location">Sort by chapter</button>
-      <button class="sort" data-sort="country">Sort by country</button>
-    </div>"""
+        <div class="menu">
+          <input class="search" placeholder="Search">
+          <button class="sort asc" data-sort="location">Sort by chapter</button>
+          <button class="sort" data-sort="country">Sort by country</button>
+        </div>
+        """
     )
 )
 with list.add(div(cls="list")):
@@ -131,7 +130,14 @@ with list.add(div(cls="list")):
 
         if show_map:
             with div(cls="chapter"):
-                div(li("{country}".format(country=country.upper()), cls="country"))
+                a(
+                    "{c}".format(c=country.upper()),
+                    href="https://forum.tzm.community/tags/{c}".format(c=country),
+                    target="blank",
+                    cls="country",
+                    data_location=title,
+                )
+
                 div(title, cls="location")
 
                 if contact_by_email and member_count >= 1:
@@ -166,8 +172,9 @@ with list.add(div(cls="list")):
 list.add(
     raw(
         """
-    <script src="list.js"></script>
-    <script src="main.js"></script>"""
+        <script src="list.js"></script>
+        <script src="main.js"></script>
+        """
     )
 )
 
