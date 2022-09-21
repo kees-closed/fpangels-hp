@@ -34,6 +34,10 @@ a {
   color: unset;
 }
 
+.leaflet-control-attribution a:hover {
+  text-decoration: none;
+}
+
 .button {
   display: flex;
   justify-content: center;
