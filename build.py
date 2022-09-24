@@ -75,7 +75,7 @@ with doc.head:
     )
 
 # Skeleton
-header = doc.add(header()).add(div(cls="wrapper"))
+header = doc.add(header()).add(div(cls="wrapper header"))
 map = doc.add(div(cls="map"))
 list = doc.add(section(cls="wrapper")).add(div(cls="annotated-list", id="chapters"))
 footer = doc.add(footer()).add(div(cls="wrapper"))
