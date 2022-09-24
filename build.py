@@ -47,6 +47,7 @@ else:
         chapters = json.loads(file.read())
 
 doc = document(title="TZM Chapters")
+doc.set_attribute("lang", "en")
 
 with doc.head:
     link(rel="stylesheet", href="style.min.css")
