@@ -38,7 +38,7 @@ def get_chapter_country(bio):
 # Get chapter JSON
 if not exists(chapters_data):
     print("Local chapters data not found, fetching directly from Internet")
-    response = requests.get("https://forum.tzm.community/groups.json?filter=chapter")
+    response = requests.get("https://tzm.one/groups.json?filter=chapter")
 
     if response.status_code == requests.codes.ok:
         chapters = json.loads(response.text)["groups"]
@@ -61,7 +61,7 @@ with doc.head:
     )
     meta(
         name="image",
-        content="https://chapters.tzm.community/resources/seo-image.png",
+        content="https://chapters.tzm.one/resources/seo-image.png",
     )
     meta(property="og:title", content="Chapters Map | The Zeitgeist Movement")
     meta(
@@ -69,10 +69,10 @@ with doc.head:
         content="A global chapters overview of The Zeitgeist Movement",
     )
     meta(property="og:type", content="website")
-    meta(property="og:url", content="https://chapters.tzm.community")
+    meta(property="og:url", content="https://chapters.tzm.one")
     meta(
         property="og:image",
-        content="https://chapters.tzm.community/resources/seo-image.png",
+        content="https://chapters.tzm.one/resources/seo-image.png",
     )
 
 # Skeleton
@@ -86,7 +86,7 @@ header.add(h1("TZM Chapters"))
 header.add(
     a(
         "More Info",
-        href="https://forum.tzm.community/quick-start",
+        href="https://tzm.one/quick-start",
         target="blank",
         cls="button btn-info",
     )
@@ -96,7 +96,7 @@ header.add(
 map.add(
     raw(
         """
-        <iframe src="https://map.tzm.community/?show=chapters" allowfullscreen="true" frameborder="0"></iframe>
+        <iframe src="https://map.tzm.one/?show=chapters" allowfullscreen="true" frameborder="0"></iframe>
         """
     )
 )
@@ -133,7 +133,7 @@ with list.add(div(cls="list")):
             with div(cls="chapter"):
                 a(
                     "{c}".format(c=country.upper()),
-                    href="https://forum.tzm.community/tag/{c}".format(c=country),
+                    href="https://tzm.one/tag/{c}".format(c=country),
                     target="blank",
                     cls="country",
                     data_location=title,
@@ -154,18 +154,14 @@ with list.add(div(cls="list")):
                         "{n} member{s}".format(
                             n=member_count, s="s" if member_count > 1 else ""
                         ),
-                        href="https://forum.tzm.community/groups/{name}".format(
-                            name=name
-                        ),
+                        href="https://tzm.one/groups/{name}".format(name=name),
                         target="blank",
                         cls="button btn-chapters",
                     )
                 else:
                     a(
                         "No members",
-                        href="https://forum.tzm.community/groups/{name}".format(
-                            name=name
-                        ),
+                        href="https://tzm.one/groups/{name}".format(name=name),
                         target="blank",
                         cls="button btn-chapters",
                     )
