@@ -21,16 +21,19 @@ from dominate import document
 from os import chown, chmod
 from os.path import exists
 
+
 chapters_data = "/var/lib/chapters_map/current_chapters.json"
 
 
 # Get country code based on hashtag in group bio
 def get_chapter_country(bio):
-    hashtag = re.compile(r"#(\w+)")
+    hashtag = re.compile(r"\/tag\/(\w+)|#(\w+)")
     country = hashtag.search(bio)
 
     if country:
-        return country.group(1)
+        for _hashtag in country.groups():
+            if _hashtag:
+                return _hashtag
     else:
         return "un"
 
